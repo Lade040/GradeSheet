@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Grade Sheet</title>
+	<meta name="description" content="Highschool grade sheet to calculate total  and average scores of subjects offered by student">
+	<meta name="keyword" content="grade, highschool, school,subject,education">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+</head>
+<body>
+	<div class="container-fluid containbody">
+		<div class="row mt-4 justify-content-center">
+			<div class="col-11">
+				<h1 class="headerone">High School Grade Sheet</h1>
+				<p class="white">Enter Your scores below</p>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-4 ">
+			<div class="col-md-5 mt-2">
+				<div>
+					<h4 class="orange">Subject</h4>
+					<p class="mb-3 white">English</p>
+					<p class="mb-3 white">Mathematics</p>
+					<p class="mb-3 white">Physics</p>
+					<p class="mb-3 white">Chemistry</p>
+					<p class="mb-3 white">Biology</p>
+					<p class="mb-3 white">Yoruba</p>
+					<p class="mb-3 white">French</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div>
+					<h4 class="text-center orange">Score</h4>
+						
+					<input type="number" min="0" max="100" name="" id="english" class="form-control mb-2 score" oninput="grader(this.value,'gradee');">
+				
+					<input type="number" min="0" max="100" name="" id="mathematics" class="form-control mb-2 score" oninput="grader(this.value,'gradem');">
+						
+					<input type="number" min="0" max="100" name="" id="physics" class="form-control mb-2 score" oninput="grader(this.value,'gradep');">
+
+					<input type="number"  min="0" max="100" name="" id="chemistry" class="form-control mb-2 score" oninput="grader(this.value,'gradec');">
+
+					<input type="number" min="0" max="100" name="" id="biology" class="form-control mb-2 score" oninput="grader(this.value,'gradeb');">
+
+					<input type="number" min="0" max="100" name="" id="yoruba" class="form-control mb-2 score" oninput="grader(this.value,'gradey');">
+
+					<input type="number" min="0" max="100" name="" id="french" class="form-control mb-2 score" oninput="grader(this.value,'gradef');">
+
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div>
+					<h4 class="text-center orange">Grade</h4>
+
+					<input type="text" name="" id="gradee" class="form-control mb-2" readonly>
+					
+					<input type="text" name="" id="gradem" class="form-control mb-2" readonly>
+						
+					<input type="text" name="" id="gradep" class="form-control mb-2" readonly>
+
+					<input type="text" name="" id="gradec" class="form-control mb-2" readonly>
+
+					<input type="text" name="" id="gradeb" class="form-control mb-2" readonly>
+
+					<input type="text" name="" id="gradey" class="form-control mb-2" readonly>
+
+					<input type="text" name="" id="gradef" class="form-control mb-2" readonly>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-11 mb-5 mt-4">
+				<h4 class="text-danger" id="errormessage"></h4>
+				<button type="button" class="btn btn-warning" onclick="totalGrade()">Get Result</button>
+			</div>
+		</div>
+		<div class="row justify-content-center mb-4 ">
+			<div class="col-md-6">
+				<h4 id="total" class="orange">TOTAL:</h4>
+			</div>
+			<div class="col-md-5 mb-4 mt-5">
+				<h4 id="totalscore" class="orange"></h4>
+			</div>
+		</div>
+		<div class="row mb-4 justify-content-center">
+			<div class="col-md-6 mt-5">
+				<h5 id="average" class="orange">Average:</h5>
+			</div>
+			<div class="col-md-5 mt-5">
+				<h5 id="averagescore" class="orange"></h5>
+			</div>
+		</div>
+		<div class="row mb-4 mt-5 justify-content-center">
+			<div class="col-md-3 mt-5">
+				<h5 class="orange">Remarks:</h5>
+			</div>
+			<div class="col-md-4 mt-5">
+				<h4 id="remarks" class="orange"></h4>
+			</div>
+			<div class="col-md-4 mt-3">
+				<img src="" id="remarksimage" class="img-fluid" width="50%">
+			</div>
+		</div>
+	<footer>
+		<div class="row">
+			<div class="col-md-12 footer">
+				<p class="text-warning text-center footertext">&copy; Laddidi 2023</p>
+			</div>
+		</div>
+	</footer>
+	</div>
+<script type="text/javascript" src="javascript/main.js"></script>
+</body>
+</html>
